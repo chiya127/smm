@@ -54,6 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
+  get  '/signup',  to: 'users#new'
+  resources :users
+
   # grape api
   mount API::Root => '/'
 end

@@ -3,7 +3,7 @@ module V1
     resource :people do
 
       # GET /v1/people
-      desc 'api.'
+      desc 'api'
       get do
         p 'api'
       end

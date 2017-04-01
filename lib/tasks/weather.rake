@@ -1,5 +1,5 @@
 namespace :weather do
-  desc "Users中confirm_atから１週間が経過していれば削除" #=> 説明
+  desc "weather"
 
 # $ rake weather:info のように使う
   task :info => :environment do
@@ -98,6 +98,7 @@ namespace :weather do
     weatherapi = Weather_Api.new()
     currentStatus = weatherapi.weather_status_case(weatherapi.weather_ids())
     #system("say '現在の東京の天気は#{currentStatus}です'")
-    p "say '現在の東京の天気は#{currentStatus}です'"
+    message = "say '現在の東京の天気は#{currentStatus}です'"
+    JSON.parse(message)
   end
 end
