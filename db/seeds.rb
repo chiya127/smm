@@ -7,5 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # create users
-
-User.create(:name => 1, :age => 1, :address => 1, :email => 1, :password => 1)
+5.times do |no|
+  no += 1
+  User.create(
+        :name => "name#{no}",
+        :age => no,
+        :address => no,
+        :email => no,
+        :password => no
+      )
+end
